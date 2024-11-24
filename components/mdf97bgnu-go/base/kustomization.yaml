@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: mdf97bgnu-go
+  janus-idp.io/tekton: mdf97bgnu-go
+  backstage.io/kubernetes-id: mdf97bgnu-go
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: mdf97bgnu-go
+resources:
+- deployment.yaml
+- route.yaml
+- service.yaml

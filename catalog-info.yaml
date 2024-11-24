@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mdf97bgnu-go-gitops
+  description: This is GitOps manifest for mdf97bgnu-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: mdf97bgnu-go
+    backstage.io/kubernetes-id: mdf97bgnu-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: mdf97bgnu-go   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:mdf97bgnu-go
